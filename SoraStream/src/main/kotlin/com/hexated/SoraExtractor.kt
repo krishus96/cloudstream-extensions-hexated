@@ -1721,7 +1721,7 @@ object SoraExtractor : SoraStream() {
             it.attr("data-id") to it.text()
         }.apmap {
             when {
-                it.second.contains(Regex("(Player F|Player SE|Player N)")) -> {
+                it.second.contains(Regex("(Player F|Player SE|Player N|Player D)")) -> {
                     invokeSmashyFfix(it.second, it.first, url, callback)
                 }
 
